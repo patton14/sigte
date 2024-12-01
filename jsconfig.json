@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@/components/*": ["components/*"],
+        "@/service/*": ["utils/service/*"],
+        "@/consts": ["utils/consts/consts.js"],
+        "@/api":["pages/api/auth/[...nextauth].js"],
+          "@/*": ["*"],
+      }
+    }
+  }

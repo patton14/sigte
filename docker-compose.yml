@@ -1,0 +1,29 @@
+version: '3'
+services:
+    nextjs-server:
+        container_name: web-app-nextjs-sigte
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: minsal-registry-quay-quay-registry.apps.acm.minsal.cl/sigte/sigte-front-nextjs-dev:1.5.7
+        ports:
+            - ${PORT}:3000
+        environment:
+            - NEXTAUTH_URL=${NEXTAUTH_URL}
+            - NEXTAUTH_SECRET=${NEXTAUTH_SECRET}
+            - JWT_SECRET=${JWT_SECRET}
+            - API_SERVICIO_SALUD=${API_SERVICIO_SALUD}
+            - API_TIPO_CARGA=${API_TIPO_CARGA}
+            - API_ESTADO_CARGAS=${API_ESTADO_CARGAS}
+            - API_CARGAS=${API_CARGAS}
+            - API_USUARIOS=${API_USUARIOS}
+            - API_ROLES=${API_ROLES}
+            - API_ROL_ASIGNACION=${API_ROL_ASIGNACION}
+            - RECAPTCHA_SECRET_KEY=${RECAPTCHA_SECRET_KEY}
+            - RECAPTCHA_SITE_KEY=${RECAPTCHA_SITE_KEY}
+            - API_TIPO_PRESTACION=${API_TIPO_PRESTACION}
+            - API_ESTABLECIMIENTO=${API_ESTABLECIMIENTO}
+            - API_CASOS=${API_CASOS}
+            - API_CASOS_HISTORICOS=${API_CASOS_HISTORICOS}
+            - API_COMUNAS=${API_COMUNAS}
+            - LIMITADOR_FILAS_EXCEL=${LIMITADOR_FILAS_EXCEL}
