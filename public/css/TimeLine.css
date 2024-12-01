@@ -1,0 +1,49 @@
+.timeline-demo .custom-marker {
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-demo .p-timeline-event-content,
+.timeline-demo .p-timeline-event-opposite {
+    line-height: 1;
+}
+
+@media screen and (max-width: 960px) {
+    .timeline-demo .customized-timeline .p-timeline-event:nth-child(even) {
+        flex-direction: row !important;
+    }
+    .timeline-demo .customized-timeline .p-timeline-event:nth-child(even) .p-timeline-event-content {
+        text-align: left !important;
+    }
+    .timeline-demo .customized-timeline .p-timeline-event-opposite {
+        flex: 0;
+    }
+    .timeline-demo .customized-timeline .p-card {
+        margin-top: 1rem;
+    }
+}
+
+.custom-splitbutton {
+    width: 6rem; /* Ajusta el tamaño según sea necesario */
+    height: 2.5rem;
+    border-radius: 50% !important; /* Asegúrate de que el botón sea redondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* Elimina el padding extra */
+}
+
+.custom-splitbutton .p-button-icon {
+    font-size: 1rem; /* Ajusta el tamaño del ícono */
+    margin-right: 0; /* Elimina el margen derecho del ícono */
+}
+
+.custom-splitbutton .p-splitbutton-menubutton {
+    display: none; /* Oculta el botón del menú desplegable para mantener la estética redonda */
+}
