@@ -1,0 +1,15 @@
+.layout-main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start; /* Asegura que el contenido se inicie desde la parte superior */
+    padding-top: calc(20vh + 6rem); /* Espacio suficiente para el encabezado y la barra de navegación */
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%; /* Mantiene el ancho dentro de un contenedor centralizado */
+    transition: margin-left $transitionDuration;
+}
+
+.layout-main {
+    flex: 1 1 auto;
+}
